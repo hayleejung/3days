@@ -162,7 +162,7 @@
 
 #commentinputleft{
 	float:left;
-	width:75%;
+	width:84%;
 }
 
 #commentinputmid{
@@ -175,7 +175,7 @@
 #commentinputright{
 	float:left;
 	font-size:0.85em;
-	width : 24%;
+	width : 15%;
 	padding : 6px;
 	padding-top: 10px;
 	color:white;
@@ -240,7 +240,44 @@
 
 
 /*************** group ****************/
+#groupsbox{
+	padding: 30px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
 
+#grouptitle{
+	font-family: abel, sans-serif;
+	color : #77cabc;
+	font-size: 1.5em;
+	border-style: none;
+	border-bottom-style:solid;
+	border-color : #77cabc;
+	border-width: 1px;
+	padding : 5px;
+}
+
+.grouplist{
+	margin-left: 30px;
+	font-family: sans-serif;
+	font-size: 0.9em;
+	color: #1c1c1c;
+	border-style: none;
+	border-bottom-style:solid;
+	border-color : #77cabc;
+	border-width: 1px;
+	padding : 10px;
+	text-transform: uppercase;
+}
+
+#groupadd{
+	text-align: right;
+	color: #77cabc;
+	padding-right: 30px;
+	padding-top: 5px;
+	font-size: 0.7em;
+	text-transform: uppercase;
+}
 
 
 

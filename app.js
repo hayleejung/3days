@@ -179,14 +179,15 @@ app.post('/creategroup', function(req, res){
 		groupname: groupname,
 		latitude: data.latitude,
 		longitude: data.longitude
+
 	});
 
 	newGroup.save(function(err){
 		if(err) console.err(err);
 		console.log('Groups successfully added')
+		console.log(newGroup);
+		res.redirect('/view/'+newGroup['_id']);
 	})
-
-	res.redirect('/creategroup');
 })
 
 // not in view// in comment

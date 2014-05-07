@@ -3,9 +3,13 @@
 
 <div id = "mainbox">
 <div id="map-canvas"></div>
-<div>Groups nearby</div>
-
-
+	<div id="groupsbox">
+		<div id='grouptitle'>
+			Groups nearby
+		</div>
+	</div>
+	<div id="groupadd"><span class="glyphicon glyphicon-plus"></span>
+	<a href="/creategroup">Add a group</a></div>
 </div>
 
 
@@ -18,7 +22,6 @@
 		<a href="/nearbygroup"><span class="glyphicon glyphicon-map-marker"></a>
 	</div>	
 </div>
-
 
 
 
@@ -43,11 +46,11 @@
 					console.log(data);
 					// document.getElementById('asdf').innerHTML = data[0];
 
-					var div = document.getElementById('mainbox');
+					var div = document.getElementById('groupsbox');
 
 					for(var i = 0; i < data.length; i++) {
 						var a = document.createElement('div');
-						a.innerHTML = "<a href = '/view/" + data[i]['id'] + "'>" + data[i]['name'] +"</a>"
+						a.innerHTML = "<div class='grouplist'><a href = '/view/" + data[i]['id'] + "'>" + data[i]['name'] +"</a></div>"
 						div.appendChild(a);
 					}
 				}

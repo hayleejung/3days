@@ -1,15 +1,33 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+<script src = "/js/geo.js"></script>
+
 <div id = "mainbox">
+<div id="map-canvas"></div>
 <form action="/creategroup" method="POST">
 	<textarea type='text' name="creategroup" placeholder='make new group' id="contentinput" required></textarea>
 	<input id="longitude" type="hidden" name="longitude" value="333" />
 	<input id="latitude" type="hidden" name="latitude" value="555" />
 	<br />
-	<button type="submit">Post</button>
+	<button type="submit">CREATE NEW GROUP</button>
 </form>
 
-
-
 <p id="demo"></p>
+
+
+</div>
+
+
+<div id = "topbox">
+	<div id = "topdivboxleft">
+		<span class="glyphicon glyphicon-th-list"></span>
+	</div>	
+	<div id = "topdivbox" style= "text-align: center;">create new group</div>	
+	<div id = "topdivboxright" style= "text-align: right;">
+		<a href="/nearbygroup"><span class="glyphicon glyphicon-map-marker"></a>
+	</div>	
+</div>
+
+
 
 <script>
 	// Get geo data
@@ -56,7 +74,6 @@
 
 
 
-</div>
 
 
 
