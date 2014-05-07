@@ -1,0 +1,30 @@
+<div id = "mainbox">
+<form action="/post" method="POST">
+	<textarea type='text' name="content" placeholder='Content' height="100%" id="contentinput" rows="15" required></textarea>
+</div>
+
+<div class = 'bottombox'>
+	<div class="emptydivbox" style="width: 49%">
+		<span class="glyphicon glyphicon-picture"></span> ADD PHOTO
+	</div>
+	<div id="commentinputmid"></div>
+	<div class="emptydivbox" style="width: 49%">
+		<span class="glyphicon glyphicon-pencil"></span>
+		<button type="submit" class="plainbutton">COMMENT</button></ br>
+	</div>
+</form>
+</div>
+
+<div class = 'bottombox'>
+	<div id="commentinputleft">
+	<form action="/comment" method="POST">
+		<input type="hidden" name="id" value="{{id}}" />
+<!-- 		<input type="text" name="comment"  placeholder="Comment Here" /> -->
+		<textarea type='text' id='commentinput' name="comment" placeholder='Comment Here' required></textarea>
+		</div>
+		<div id="commentinputmid"></div>
+		<div id="commentinputright">
+		<button type="submit" class="plainbutton">Comment</button></ br>
+	</form>
+	</div>
+</div>

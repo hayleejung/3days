@@ -1,0 +1,65 @@
+
+<div id = "mainbox">
+	{{#each thread}}
+	<div class="postbox">
+		{{content}}
+		<div class="postattribox">
+		 	<div class="postdivbox" style="padding-left:0px">
+				{{showDate}} 
+			</div>
+
+			<div class="postdivbox">
+				<a href='/comment/{{_id}}' class='more-comments' data-thread-id='{{_id}}'>
+					<!-- <a href='/comment/{{_id}}'> -->
+					<span class = "glyphicon glyphicon-comment"></span> 
+					{{comments.length}}</a>
+			</div>
+
+			<div class="postdivbox like-post" data-thread-id='{{_id}}'>
+		 		<span class = "glyphicon glyphicon-thumbs-up"></span>
+		 		{{like}}
+		 	</div> 
+
+		 	<div class="postdivbox">
+		 		<span class = "glyphicon glyphicon-thumbs-down"></span> 200
+		 	</div>
+		 </div>
+	</div>
+
+	<div class='commentsbox' id='{{_id}}'>
+		<div class = "commentline"></div>
+	</div>
+	{{/each}} 
+	<div class = "emptybottombox">
+	&nbsp;
+	</div>
+</div>
+
+<div class = 'bottombox'>
+	<div id="commentinputleft">
+	<form action="/postatview" method="POST">
+		<input type="hidden" name="groupid" value="{{groupID}}" />
+<!-- 		<input type="text" name="comment"  placeholder="Comment Here" /> -->
+		<textarea type='text' class='animated' id='postinput' name="content" placeholder='What do you want to say?' required></textarea>
+	</div>
+	<div id="commentinputmid"></div>
+	<div id="commentinputright">
+		<button type="submit" class="plainbutton">POST</button></ br>
+	</form>
+	</div>
+</div>
+
+
+<div id = "topbox">
+	<div id = "topdivboxleft">
+		<span class="glyphicon glyphicon-th-list"></span>
+	</div>	
+	<div id = "topdivbox"> {{groupname}}</div>	
+	<div id = "topdivboxright" style= "text-align: right;">
+		<a href="/nearbygroup"><span class="glyphicon glyphicon-map-marker"></a>
+	</div>	
+</div>
+
+
+
+

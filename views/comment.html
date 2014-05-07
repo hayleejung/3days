@@ -1,0 +1,50 @@
+<div id = "mainbox">
+	<div class="postbox">
+		{{content}}	 
+		<div class="postattribox">
+		 	<div class="postdivbox" style="padding-left:0px">
+		 		{{showDate}} no
+		 	</div>
+		 	<div class="postdivbox">
+		 		<span class = "glyphicon glyphicon-comment"></span> 5
+		 	</div>
+		 	<div class="postdivbox">
+		 		<span class = "glyphicon glyphicon-thumbs-up"></span>
+		 		44
+		 	</div> 
+		 	<div class="postdivbox">
+		 		<span class = "glyphicon glyphicon-thumbs-down"></span> 200
+		 	</div>
+		 </div>
+	</div>
+
+	<div class = "commentsbox">
+		<div class = "commentline"></div>
+		{{#each comments}}
+			<div class = "commentbox">
+				<div class = "commentleft">
+					{{this}}
+				</div>
+				<div class = "commentright">
+					3d
+				</div>
+				<div class="clearfix visible-xs"></div>
+			</div>
+		{{/each}}
+	</div>	
+</div>
+
+<div class = 'bottombox'>
+	<div id="commentinputleft">
+	<form action="/comment" method="POST">
+		<input type="hidden" name="id" value="{{id}}" />
+<!-- 		<input type="text" name="comment"  placeholder="Comment Here" /> -->
+		<textarea type='text' id='commentinput' name="comment" class='animated' placeholder='Comment Here' required></textarea>
+		</div>
+		<div id="commentinputmid"></div>
+		<div id="commentinputright">
+		<button type="submit" class="plainbutton">Comment</button></ br>
+	</form>
+	</div>
+</div>
+

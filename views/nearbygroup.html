@@ -1,0 +1,62 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+<script src = "/js/geo.js"></script>
+
+<div id = "mainbox">
+<div id="map-canvas"></div>
+<div>Groups nearby</div>
+
+
+</div>
+
+
+<div id = "topbox">
+	<div id = "topdivboxleft">
+		<span class="glyphicon glyphicon-th-list"></span>
+	</div>	
+	<div id = "topdivbox" style= "text-align: center;">Search nearby</div>	
+	<div id = "topdivboxright" style= "text-align: right;">
+		<a href="/nearbygroup"><span class="glyphicon glyphicon-map-marker"></a>
+	</div>	
+</div>
+
+
+
+
+
+<script>
+// Get geo data
+(function getLocation(){
+	if (navigator.geolocation){
+    	navigator.geolocation.getCurrentPosition(function(position) {
+		    var data = {};
+			data.latitude = position.coords.latitude;
+			data.longitude = position.coords.longitude;
+			
+			// Set geo data to forms				
+			$.ajax({
+				type: 'POST',
+				data: JSON.stringify(data),
+				contentType: 'application/json',
+				url: 'http://localhost:5000/nearbygroup',
+				success: function(data){
+					console.log(data);
+					// document.getElementById('asdf').innerHTML = data[0];
+
+					var div = document.getElementById('mainbox');
+
+					for(var i = 0; i < data.length; i++) {
+						var a = document.createElement('div');
+						a.innerHTML = "<a href = '/view/" + data[i]['id'] + "'>" + data[i]['name'] +"</a>"
+						div.appendChild(a);
+					}
+				}
+			});
+
+    	});
+ 	}else{
+ 		console.log("Geolocation is not supported by this browser.");
+ 	}
+}());
+</script>
+
+

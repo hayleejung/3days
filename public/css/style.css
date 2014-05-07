@@ -1,0 +1,289 @@
+.emptydivbox{
+	float : left;
+	min-height: 1px;
+	text-align: center;
+	color : white;
+	padding: 5px
+}
+
+/*************** big tree ****************/
+#topdivbox{
+	font-family: abel, sans-serif;
+	float : left;
+	color : white;
+	font-size: 1.6em;
+	margin : 0px;
+	text-transform: uppercase;
+	width:70%;
+	text-align: center;
+}
+
+#topdivboxleft{
+	font-family: abel, sans-serif;
+	float : left;
+	color : white;
+	font-size: 1.8em;
+	margin : 0px;
+	text-transform: uppercase;
+	width: 15%;
+}
+
+#topdivboxright{
+	font-family: abel, sans-serif;
+	float : left;
+	color : white;
+	font-size: 1.8em;
+	margin : 0px;
+	text-transform: uppercase;
+	width: 15%;
+	text-align: right;
+}
+
+#topbox{
+	position : fixed;
+	background-color: #77cabc;
+	height : 50px;
+	width : 100%;
+	left : 0px;
+	top : 0px;
+	padding: 10px;
+	padding-left: 15px;
+	box-shadow: 0px 0px 20px #888888;
+}
+
+
+#mainbox{
+	position : absolute;
+	top : 50px;
+	left:0px;
+	width:100%;
+}
+
+.bottombox{
+	position : fixed;
+	background-color: #77cabc;
+	bottom : 0px;
+	left : 0px;
+	width : 100%;
+}
+
+.emptybottombox{
+	position : relative;
+	height:	50px;
+	width : 100%;
+}
+
+/*************** post ****************/
+
+.postbox{
+	word-wrap:break-word;
+	width:100%;
+	font-size: 1em;
+	font-color: black;
+	padding : 20px;
+	margin : 0px;
+
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, #EDEDED),
+		color-stop(0.26, #FFFFFF));
+	background-image: -o-linear-gradient(bottom, #EDEDED 0%, #FFFFFF 10%);
+	background-image: -moz-linear-gradient(bottom, #EDEDED 0%, #FFFFFF 10%);
+	background-image: -webkit-linear-gradient(bottom, #EDEDED 0%, #FFFFFF 10%);
+	background-image: -ms-linear-gradient(bottom, #EDEDED 0%, #FFFFFF 10%);
+	background-image: linear-gradient(to bottom, #EDEDED 0%, #FFFFFF 10%);
+}
+
+.postattribox{
+	width: 100%;
+	margin-bottom: 24px;
+	margin-top: 8px;
+}
+
+.postdivbox{
+	float : left;
+	text-align: left;
+	padding-left: 12%;
+	color : #77cabc;
+	font-size: 0.85em;
+	width :25%;
+	margin : 0px;
+}
+
+
+/*************** comment ****************/
+.commentsbox{
+	width: 100%;
+	background-color: #333333;
+	padding: 0px;
+	margin: 0px;
+	border-style: none;
+	border-top-style:solid;
+	border-color : white;
+	border-width: 0px;
+
+}
+
+.commentbox{
+	word-wrap:break-word;
+	position: relative;
+	float: center;
+	width : 98%;
+	background-color: #eaeaea;
+	margin: 0px 1%;
+	padding : 12px;
+	border-style: none;
+	border-top-style:solid;
+	border-color : white;
+	border-width: 1px;
+}
+
+.commentline{
+	position: absolute;
+	width:100%;
+	height:1px;
+	background-color: white;
+}
+
+.commentleft{
+	float: left;
+	width: 92%;
+	min-height: 1px;
+}
+.commentright{
+	color : #77cabc;
+	font-size: 0.85em;
+	text-align: right;
+	float: left;
+	width: 8%;
+}
+
+#commentinputleft{
+	float:left;
+	width:75%;
+}
+
+#commentinputmid{
+	float:left;
+	width:1px;
+	background-color: white;
+	height: 35px;
+}
+
+#commentinputright{
+	float:left;
+	font-size:0.85em;
+	width : 24%;
+	padding : 6px;
+	padding-top: 10px;
+	color:white;
+}
+
+.commentinview{
+	float: center;
+	width : 98%;
+	background-color: #eaeaea;
+	margin: 0px 1%;
+	padding : 8px;
+	border-style: none;
+	border-top-style:solid;
+	border-color : white;
+	border-width: 1px;
+
+}
+
+.newcommentbox{
+
+}
+
+.commentinputbox{
+    background: rgba(255,255,255);
+    height: 18px; 
+    font-size: 90%;
+    border : 3px;
+
+    padding:5px;
+    padding-left: 4px;
+
+    -moz-border-radius:5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -khtml-border-radius: 5px; /* KHTML */
+    border-radius: 5px; /* CSS3 */
+
+}
+
+.plainbutton{
+	border-style:none;
+	background-color: transparent;
+	text-transform: uppercase;
+}
+
+.commentsummit {
+    border: 0px solid #006;
+    background: #77cabc;
+    font-size: 65%;
+    text-transform: uppercase;
+
+    -moz-border-radius:5px; /* Firefox */
+    -webkit-border-radius: 5px; /* Safari, Chrome */
+    -khtml-border-radius: 5px; /* KHTML */
+    border-radius: 5px; /* CSS3 */
+
+    padding: :2px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: #5e5e5e;
+}
+
+
+
+/*************** group ****************/
+
+
+
+
+/*************** extra ****************/
+a:link { color: inherit; text-decoration: none} 
+a:active { color: inherit; text-decoration: none} 
+a:hover { color: inherit; text-decoration: none} 
+a:visited { color: inherit; text-decoration: none} 
+
+#postinput {
+	background-color: transparent;
+	border:0px solid #ccc;
+	padding: 10px;
+	padding-bottom : 0px;
+	vertical-align: top;
+	width: 100%;
+	line-height: 1.2;
+	color : black;
+	outline: none;
+	resize: none;
+}
+
+#contentinput{
+	border:0px;
+	outline: none;
+	resize: none;
+	width:100%;
+	padding:25px;
+}
+
+.animated {
+	-webkit-transition: height 0.2s;
+	-moz-transition: height 0.2s;
+	transition: height 0.2s;
+}
+
+#map-canvas{
+	width : 85%;
+	height : 250px;
+	margin: auto;
+	margin-top: 30px;
+}
+
+
+:focus {outline:none;} /*remove highlight*/
+

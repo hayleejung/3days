@@ -1,0 +1,65 @@
+<div id = "mainbox">
+<form action="/creategroup" method="POST">
+	<textarea type='text' name="creategroup" placeholder='make new group' id="contentinput" required></textarea>
+	<input id="longitude" type="hidden" name="longitude" value="333" />
+	<input id="latitude" type="hidden" name="latitude" value="555" />
+	<br />
+	<button type="submit">Post</button>
+</form>
+
+
+
+<p id="demo"></p>
+
+<script>
+	// Get geo data
+	getLocation();
+	var x=document.getElementById("demo");
+	function getLocation(){
+		if (navigator.geolocation){
+	    	navigator.geolocation.getCurrentPosition(returnPosition);
+	 	}else{
+	 		x.innerHTML="Geolocation is not supported by this browser.";
+	 	}
+	 }
+	 // Set geo data to forms
+	function returnPosition(position){
+
+		document.getElementById('latitude').value = position.coords.latitude;
+		document.getElementById('longitude').value = position.coords.longitude;
+		
+		console.log(position.coords.latitude);
+		console.log(position.coords.longitude);
+	}
+
+	// Set geo data to forms
+	// document.getElementById('longitude').value="325235";
+
+	
+
+
+
+// (function(){
+// 	$.ajax({
+// 	  type: 'POST',
+// 	  data: JSON.stringify(data),
+// 	  contentType: 'application/json',
+// 	  url: 'http://localhost:5000/creategroup',
+// 	  success: function(data){
+// 	  	console.log('send success');
+// 	  	console.log(JSON.stringify(data));
+// 	  }
+// 	});
+// }());
+
+</script>
+
+
+
+</div>
+
+
+
+
+
+
