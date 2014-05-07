@@ -35,6 +35,7 @@ var map;
 
       // Try HTML5 geolocation
       if(navigator.geolocation) {
+            console.log('geo script');
         navigator.geolocation.getCurrentPosition(function(position) {
           var pos = new google.maps.LatLng(position.coords.latitude,
                                            position.coords.longitude);

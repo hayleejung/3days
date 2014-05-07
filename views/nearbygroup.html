@@ -27,6 +27,7 @@
 // Get geo data
 (function getLocation(){
 	if (navigator.geolocation){
+		console.log('html script');
     	navigator.geolocation.getCurrentPosition(function(position) {
 		    var data = {};
 			data.latitude = position.coords.latitude;
